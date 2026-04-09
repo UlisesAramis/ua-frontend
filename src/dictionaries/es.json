@@ -1,0 +1,22 @@
+{
+  "header": {
+    "role": "Frontend Dev",
+    "nav": {
+      "skills": "Habilidades",
+      "projects": "Proyectos",
+      "about": "Sobre mí",
+      "contact": "Contacto"
+    }
+  },
+
+  "hero": {
+    "role": "Desarrollador Frontend",
+    "projects": "Ver Proyectos",
+    "contact": "Contacto"
+  },
+
+  "skills": {
+    "title": "Technical Expertise",
+    "subtitle": "Evolution and mastery of front-end tools through years of continuous development and optimization."
+  }
+}
