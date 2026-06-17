@@ -5,10 +5,11 @@ import { IoCloseSharp } from "react-icons/io5";
 
 type MobileNavProps = {
   open: boolean;
+  lang: "es" | "en";
   onClose: () => void;
 };
 
-const MobileNav: React.FC<MobileNavProps> = ({ open, onClose }) => {
+const MobileNav: React.FC<MobileNavProps> = ({ lang, open, onClose }) => {
   return (
     <div
       className={`fixed inset-0 bg-black z-50 transform transition-transform duration-300 ${
@@ -37,7 +38,7 @@ const MobileNav: React.FC<MobileNavProps> = ({ open, onClose }) => {
         <ul className="flex flex-col gap-4  font-medium text-white">
           <li className="group">
             <Link
-              href="/"
+              href={`/${lang}#skills`}
               className="relative  text-gray-300 transition-colors duration-300 hover:text-emerald-500 "
             >
               Habilidades

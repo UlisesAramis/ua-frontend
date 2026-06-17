@@ -1,6 +1,7 @@
 "use client";
 
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
+
 import Html from "@/Images/Html.svg";
 import Css from "@/Images/Css.svg";
 import JavaScript from "@/Images/Js.svg";
@@ -9,58 +10,62 @@ import Tailwind from "@/Images/Tailwind.svg";
 import Rive from "@/Images/Rive.svg";
 
 type Props = {
-  dict: any;
+  dict: {
+    skills: {
+      title: string;
+      subtitle: string;
+    };
+  };
 };
 
-const Skills = ({ dict }: Props) => {
-  const skillsData = [
-    { src: Html, alt: "html", invert: false },
-    { src: Css, alt: "css", invert: false },
-    { src: JavaScript, alt: "js", invert: false },
-    { src: NextJs, alt: "nextjs", invert: true },
-    { src: Tailwind, alt: "tailwind", invert: false },
-    { src: Rive, alt: "rive", invert: true },
-  ];
+type Skill = {
+  icon: StaticImageData;
+  alt: string;
+  invert?: boolean;
+};
 
-  const cardStyle = `
-    bg-black flex justify-center items-center 
-    border-[3px] border-emerald-500/50 rounded-[2.5rem]
-    shadow-[inset_0_0_40px_rgba(16,185,129,0.3)] 
-    w-40 h-40            /* Mobile: 160px */
-    md:w-52 md:h-52      /* Tablet: 208px */
-    lg:w-64 lg:h-64      /* Desktop: 256px */
-    transition-all duration-300 hover:scale-105 
-    hover:shadow-[inset_0_0_60px_rgba(16,185,129,0.5)]
-    hover:border-emerald-400
-  `;
+const skills: Skill[] = [
+  { icon: Html, alt: "HTML" },
+  { icon: Css, alt: "CSS" },
+  { icon: JavaScript, alt: "JavaScript" },
+  { icon: NextJs, alt: "Next.js", invert: true },
+  { icon: Tailwind, alt: "Tailwind" },
+  { icon: Rive, alt: "Rive", invert: true },
+];
 
+export default function Skills({ dict }: Props) {
   return (
-    <section className="w-full min-h-screen flex flex-col justify-center items-center px-4 py-20 bg-[#0a0a0a]">
-      <h1 className="text-5xl md:text-7xl font-extrabold mb-20 text-white text-center tracking-tight">
-        {dict.skills.title}
-      </h1>
+    <section id="skills" className="py-24">
+      <div className="mx-auto max-w-7xl px-4">
+        <div className="mx-auto max-w-2xl text-center">
+          <h2 className="text-4xl font-black  sm:text-5xl md:text-6xl text-emerald-600">
+            {dict.skills.title}
+          </h2>
 
-      <p>{dict.skills.subtitle}</p>
+          <p className="mt-4 text-neutral-400">{dict.skills.subtitle}</p>
+        </div>
 
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:flex lg:flex-wrap justify-center gap-6 md:gap-10 lg:gap-14 max-w-7xl">
-        {skillsData.map((skill, index) => (
-          <div key={index} className={cardStyle}>
-            <div className="relative w-24 h-24 md:w-36 md:h-36 lg:w-44 lg:h-44">
-              <Image
-                src={skill.src}
-                alt={skill.alt}
-                fill
-                priority={index < 3}
-                className={`object-contain p-4 ${
-                  skill.invert ? "invert brightness-200" : ""
-                }`}
-              />
-            </div>
-          </div>
-        ))}
+        <div className="mt-16 grid grid-cols-2 gap-5 sm:grid-cols-3 lg:grid-cols-6">
+          {skills.map((skill) => (
+            <article
+              key={skill.alt}
+              className="group flex aspect-square items-center justify-center rounded-3xl border border-white/10 transition-all duration-300 hover:-translate-y-2 hover:border-emerald-400/40 hover:bg-emerald-500/5 hover:shadow-[0_0_30px_rgba(16,185,129,0.12)]"
+            >
+              <div className="relative h-20 w-20 transition-transform duration-300 group-hover:scale-110 md:h-24 md:w-24">
+                <Image
+                  src={skill.icon}
+                  alt={skill.alt}
+                  fill
+                  draggable={false}
+                  className={`object-contain ${
+                    skill.invert ? "invert brightness-200" : ""
+                  }`}
+                />
+              </div>
+            </article>
+          ))}
+        </div>
       </div>
     </section>
   );
-};
-
-export default Skills;
+}

@@ -10,13 +10,20 @@
   },
 
   "hero": {
-    "role": "Desarrollador Frontend",
+    "role": "Frontend Developer especializado en React y Next.js. Desarrollo interfaces modernas, optimizadas y enfocadas en ofrecer una experiencia de usuario intuitiva y eficiente.",
     "projects": "Ver Proyectos",
     "contact": "Contacto"
   },
-
   "skills": {
-    "title": "Technical Expertise",
-    "subtitle": "Evolution and mastery of front-end tools through years of continuous development and optimization."
+    "title": "Expertise Técnico",
+    "subtitle": "Evolución y dominio de herramientas front-end a través de años de desarrollo y optimización constante."
+  },
+
+  "projects": {
+    "title": "Proyectos Destacados"
+  },
+
+  "aboutme": {
+    "description": "No crecí soñando con ser programador.\n\nDe hecho, todo empezó por una escena bastante simple: un amigo trabajando en su laptop. Mientras él escribía código, yo observaba sin entender demasiado qué estaba pasando. Lo curioso es que no fue el resultado lo que me llamó la atención, sino el proceso. Ver cómo unas cuantas líneas podían convertirse en algo funcional despertó una pregunta que terminó cambiando muchas cosas: \"¿Cómo se hace eso?\"\n\nDesde entonces, la curiosidad se convirtió en hábito.\n\nMe gusta aprender cosas nuevas, explorar herramientas diferentes y enfrentarme a problemas que al principio parecen imposibles de resolver. Por eso encontré mi lugar en el desarrollo Frontend. Me gusta ese punto donde la tecnología se encuentra con la creatividad, donde una idea deja de ser un boceto y se convierte en una experiencia real para alguien más.\n\nDurante tres años trabajé como Desarrollador Frontend en Ixmatix Robotics, una etapa que me permitió crecer profesionalmente, colaborar en proyectos desafiantes y entender que desarrollar software no es solo escribir código, sino construir soluciones que las personas realmente disfruten usar.\n\nActualmente sigo explorando nuevas formas de hacer la web más dinámica e interactiva. Una de las áreas que más me interesa es la animación con Rive. Aún estoy experimentando y aprendiendo, pero disfruto el reto de llevar las interacciones más allá de lo básico y darles más vida y personalidad.\n\nFuera de la programación, disfruto leer y escribir. También encuentro inspiración en la cultura azteca. Por eso elegí al jaguar como símbolo de este portafolio. No solo representa una parte de la historia que admiro, sino también características con las que me identifico: determinación, adaptación y la búsqueda constante de evolucionar.\n\nTodavía sigo aprendiendo. Probablemente esa sea la parte que más me gusta de todo esto."
   }
 }

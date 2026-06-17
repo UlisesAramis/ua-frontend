@@ -9,12 +9,15 @@
     }
   },
   "hero": {
-    "role": "Frontend Developer",
+    "role": "Frontend Developer specialized in React and Next.js. I build modern, optimized interfaces focused on delivering intuitive and efficient user experiences.",
     "projects": "View Projects",
     "contact": "Contact"
   },
   "skills": {
-    "title": "Expertise Técnico",
-    "subtitle": "Evolución y dominio de herramientas front-end a través de años de desarrollo y optimización constante."
+    "title": "Technical Expertise",
+    "subtitle": "Evolution and mastery of front-end tools through years of continuous development and optimization."
+  },
+  "projects": {
+    "title": "Featured Projects"
   }
 }

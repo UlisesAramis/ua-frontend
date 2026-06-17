@@ -1,6 +1,7 @@
 import { getDictionary } from "@/lib/dictionary";
 import "./globals.css";
 import Header from "@/Components/Ui/Header";
+import Footer from "@/Components/Ui/Footer";
 
 export default async function LangLayout({
   children,
@@ -19,6 +20,7 @@ export default async function LangLayout({
     <>
       <Header dict={dict} lang={validLang} />
       {children}
+      <Footer />
     </>
   );
 }

@@ -7,14 +7,14 @@ type Props = {
 
 const Hero = ({ dict }: Props) => {
   return (
-    <section className="w-full min-h-[90vh] flex justify-center items-center p-6 md:p-12">
-      <div className="flex flex-col-reverse items-center md:flex-row md:gap-12 lg:gap-24">
+    <section className="w-full min-h-[90vh] flex justify-center items-center px-20">
+      <div className="flex flex-col-reverse items-center lg:flex-row md:gap-12 lg:gap-24">
         <div className="text-center md:text-left mt-8 md:mt-0">
-          <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold">
+          <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-emerald-600">
             Ulises Aramis
           </h1>
 
-          <p className="text-lg md:text-2xl text-gray-400 mt-2">
+          <p className="text-lg md:text-xl text-gray-400 mt-2">
             {dict.hero.role}
           </p>
 
@@ -33,7 +33,7 @@ const Hero = ({ dict }: Props) => {
           src={Ocelotl}
           priority
           alt="Hero Image"
-          className="rounded-full border-4 border-emerald-500 p-1 lg:w-96 lg:h-96 object-cover object-top shadow-[0_0_15px_rgba(16,185,129,0.5)]"
+          className="rounded-full border-6 border-emerald-500 p-1 lg:w-96 lg:h-96 object-cover object-top shadow-[0_0_15px_rgba(16,185,129,0.5)]"
         />
       </div>
     </section>
