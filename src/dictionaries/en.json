@@ -15,9 +15,17 @@
   },
   "skills": {
     "title": "Technical Expertise",
-    "subtitle": "Evolution and mastery of front-end tools through years of continuous development and optimization."
+    "subtitle": "Specialization in front-end development, performance optimization, and interactive interface creation."
   },
   "projects": {
-    "title": "Featured Projects"
+    "title": "Selected Works",
+    "description": "During my time at Ixmatics-robotics, I contributed to the Front-End development of key platforms such as Fluent-Bee, an AI-powered English learning app, and Canela, an interactive furniture design system. Additionally, I developed personal projects such as a GIF finder application and a COVID-19 statistical dashboard, both focused on API integration and data management."
+  },
+  "aboutme": {
+    "description": "I didn't grow up dreaming of becoming a programmer. In fact, it all started with a pretty simple scene: a friend working on his laptop. While he was writing code, I watched without really understanding what was happening. Interestingly, it wasn't the result that caught my attention, but the process. Seeing how a few lines of code could turn into something functional sparked a question that ended up changing a lot of things: \"How do you do that?\" Since then, curiosity became a habit. I enjoy learning new things, exploring different tools, and taking on problems that at first seem impossible to solve. That's why I found my place in Frontend Development. I enjoy that point where technology meets creativity, where an idea stops being a sketch and becomes a real experience for someone else. For three years, I worked as a Frontend Developer at Ixmatix Robotics, a stage that allowed me to grow professionally, collaborate on challenging projects, and understand that developing software is not just about writing code, but about building solutions that people genuinely enjoy using. Today, I continue exploring new ways to make the web more dynamic and interactive. One of the areas that interests me the most is animation with Rive. I'm still experimenting and learning, but I enjoy the challenge of taking interactions beyond the basics and giving them more life and personality. Outside of programming, I enjoy reading and writing. I also find inspiration in Aztec culture. That's why I chose the jaguar as the symbol of this portfolio. It not only represents a part of the history I admire, but also characteristics I identify with: determination, adaptability, and the constant pursuit of growth. I'm still learning. That's probably the part I enjoy the most."
+  },
+  "demo": {
+    "WatchDemo": "Watch Demo",
+    "ViewCode": "See Code"
   }
 }
