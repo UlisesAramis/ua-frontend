@@ -4,7 +4,6 @@ import Bee from "@/Images/BeeLogo.webp";
 import CanelaLogo from "@/Images/Logo.svg";
 
 type Props = {
-  // Cambiado de any a un tipado más específico para mayor seguridad
   dict: {
     projects: {
       title: string;
@@ -58,7 +57,7 @@ const Projects = ({ dict }: Props) => {
       id="projects"
       className="w-full px-6 py-20 flex flex-col items-center"
     >
-      <h2 className="text-4xl font-black  sm:text-5xl md:text-6xl text-emerald-600 text-center">
+      <h2 className="text-4xl font-black sm:text-5xl md:text-6xl text-emerald-600 text-center">
         {dict.projects.title}
       </h2>
 
@@ -68,7 +67,8 @@ const Projects = ({ dict }: Props) => {
 
       <div className="flex flex-wrap justify-center gap-8">
         {projects.map((project, index) => (
-          <ProjectCard key={index} project={project} dict={dict.demo} />
+          /* CORREGIDO: Pasamos dict en lugar de dict.demo */
+          <ProjectCard key={index} project={project} dict={dict} />
         ))}
       </div>
     </section>
