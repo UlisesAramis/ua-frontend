@@ -1,16 +1,16 @@
 import Hero from "@/Components/Home/Hero";
 import Skills from "@/Components/Home/Skills";
-import ProjectCard from "@/Components/Home/ProjectCard";
 import Projects from "./Projects";
 
 type Props = {
   dict: any;
+  lang: "es" | "en";
 };
 
-const HomePage = ({ dict }: Props) => {
+const HomePage = ({ dict, lang }: Props) => {
   return (
     <main>
-      <Hero dict={dict} />
+      <Hero dict={dict} lang={lang} />
       <Skills dict={dict} />
       <Projects dict={dict} />
     </main>
