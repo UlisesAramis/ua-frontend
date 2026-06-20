@@ -42,7 +42,9 @@ export default function Skills({ dict }: Props) {
             {dict.skills.title}
           </h2>
 
-          <p className="mt-4 text-neutral-400">{dict.skills.subtitle}</p>
+          <p className="mt-4 text-neutral-400 text-lg md:text-xl">
+            {dict.skills.subtitle}
+          </p>
         </div>
 
         <div className="mt-16 grid grid-cols-2 gap-5 sm:grid-cols-3 lg:grid-cols-6">

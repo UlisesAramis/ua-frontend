@@ -62,7 +62,9 @@ const Projects = ({ dict }: Props) => {
       </h2>
 
       <div className="w-3/4 my-10">
-        <p className="text-center text-gray-400">{dict.projects.description}</p>
+        <p className="text-center text-lg text-lg md:text-xl text-gray-400">
+          {dict.projects.description}
+        </p>
       </div>
 
       <div className="flex flex-wrap justify-center gap-8">
