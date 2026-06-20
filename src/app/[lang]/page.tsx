@@ -12,5 +12,5 @@ export default async function Page({
 
   const dict = await getDictionary(validLang);
 
-  return <HomePage dict={dict} />;
+  return <HomePage dict={dict} lang={validLang} />;
 }
