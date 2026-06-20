@@ -49,7 +49,7 @@ export default function Skills({ dict }: Props) {
           {skills.map((skill) => (
             <article
               key={skill.alt}
-              className="group flex aspect-square items-center justify-center rounded-3xl border border-white/10 transition-all duration-300 hover:-translate-y-2 hover:border-emerald-400/40 hover:bg-emerald-500/5 hover:shadow-[0_0_30px_rgba(16,185,129,0.12)]"
+              className="group flex aspect-square items-center justify-center rounded-3xl border-4 border-white/10 transition-all duration-300 hover:-translate-y-2 hover:border-emerald-400/40 hover:bg-emerald-500/5 hover:shadow-[0_0_30px_rgba(16,185,129,0.12)]"
             >
               <div className="relative h-20 w-20 transition-transform duration-300 group-hover:scale-110 md:h-24 md:w-24">
                 <Image
