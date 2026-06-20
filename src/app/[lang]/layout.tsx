@@ -3,6 +3,11 @@ import "./globals.css";
 import Header from "@/Components/Ui/Header";
 import Footer from "@/Components/Ui/Footer";
 
+export const metadata = {
+  title: "Ulises Aramis",
+  description: "Professional Frontend Development Portfolio",
+};
+
 export default async function LangLayout({
   children,
   params,
