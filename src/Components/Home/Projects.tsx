@@ -67,7 +67,6 @@ const Projects = ({ dict }: Props) => {
 
       <div className="flex flex-wrap justify-center gap-8">
         {projects.map((project, index) => (
-          /* CORREGIDO: Pasamos dict en lugar de dict.demo */
           <ProjectCard key={index} project={project} dict={dict} />
         ))}
       </div>

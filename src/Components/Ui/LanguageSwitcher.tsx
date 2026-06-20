@@ -10,7 +10,6 @@ export default function LanguageSwitcher({ lang }: { lang: string }) {
     const newLang = lang === "es" ? "en" : "es";
     const newPath = pathname.replace(`/${lang}`, `/${newLang}`);
 
-    // Agregamos { scroll: false } para evitar que salte al inicio
     router.push(newPath, { scroll: false });
   };
 

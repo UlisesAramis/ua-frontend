@@ -12,13 +12,11 @@ type Project = {
   isLottie?: boolean;
 };
 
-// 1. Añadimos 'dict' al tipo de las Props
 type Props = {
   project: Project;
   dict: any;
 };
 
-// 2. Desestructuramos 'dict' para poder usarlo en el componente
 const ProjectCard = ({ project, dict }: Props) => {
   return (
     <div className="rounded-xl overflow-hidden border-2 border-emerald-500/30 shadow-md hover:shadow-emerald-500/80 transition-all duration-300 w-72">
@@ -46,7 +44,6 @@ const ProjectCard = ({ project, dict }: Props) => {
         <p className="text-gray-400 text-sm">{project.stack}</p>
 
         <div className="flex gap-2 mt-3">
-          {/* 3. Corregido: Ahora apunta al enlace correcto y usa el texto del JSON */}
           <a
             href={project.demo}
             target="_blank"
@@ -56,7 +53,6 @@ const ProjectCard = ({ project, dict }: Props) => {
             {dict.demo?.WatchDemo || "View Demo"}
           </a>
 
-          {/* 4. Corregido: Ahora el botón de código también es dinámico */}
           <a
             href={project.code}
             target="_blank"
