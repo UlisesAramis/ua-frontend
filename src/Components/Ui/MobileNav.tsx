@@ -10,12 +10,20 @@ type MobileNavProps = {
 };
 
 const MobileNav: React.FC<MobileNavProps> = ({ lang, open, onClose }) => {
-  // Arreglo de rutas centralizado para evitar repetición de código
   const navLinks = [
-    { id: "skills", label: lang === "es" ? "Habilidades" : "Skills" },
-    { id: "projects", label: lang === "es" ? "Proyectos" : "Projects" },
-    { id: "about-me", label: lang === "es" ? "Sobre mí" : "About me" },
-    { id: "contact", label: lang === "es" ? "Contacto" : "Contact" },
+    {
+      href: `/${lang}#skills`,
+      label: lang === "es" ? "Habilidades" : "Skills",
+    },
+    {
+      href: `/${lang}#projects`,
+      label: lang === "es" ? "Proyectos" : "Projects",
+    },
+    {
+      href: `/${lang}/about-me`,
+      label: lang === "es" ? "Sobre mí" : "About me",
+    },
+    { href: `/${lang}#contact`, label: lang === "es" ? "Contacto" : "Contact" },
   ];
 
   return (
@@ -24,13 +32,11 @@ const MobileNav: React.FC<MobileNavProps> = ({ lang, open, onClose }) => {
         open ? "translate-x-0" : "translate-x-full hidden"
       }`}
     >
-      {/* Header */}
       <div className="flex items-center justify-between px-6 py-4 border-b border-emerald-500">
         <h1 className="text-emerald-500 font-bold text-2xl">
           <span className="text-white">U</span>A
         </h1>
 
-        {/* Close button */}
         <button
           className="text-emerald-500 cursor-pointer"
           onClick={onClose}
@@ -41,13 +47,12 @@ const MobileNav: React.FC<MobileNavProps> = ({ lang, open, onClose }) => {
         </button>
       </div>
 
-      {/* Navigation */}
       <nav className="w-full flex justify-center items-center mt-10">
         <ul className="flex flex-col gap-6 font-medium text-white text-xl text-center">
-          {navLinks.map(({ id, label }) => (
-            <li key={id} className="group">
+          {navLinks.map(({ href, label }, index) => (
+            <li key={index} className="group">
               <Link
-                href={`/${lang}#${id}`}
+                href={href}
                 onClick={onClose}
                 className="relative text-gray-300 transition-colors duration-300 hover:text-emerald-500"
               >
