@@ -10,10 +10,18 @@ type MobileNavProps = {
 };
 
 const MobileNav: React.FC<MobileNavProps> = ({ lang, open, onClose }) => {
+  // Arreglo de rutas centralizado para evitar repetición de código
+  const navLinks = [
+    { id: "skills", label: lang === "es" ? "Habilidades" : "Skills" },
+    { id: "projects", label: lang === "es" ? "Proyectos" : "Projects" },
+    { id: "about-me", label: lang === "es" ? "Sobre mí" : "About me" },
+    { id: "contact", label: lang === "es" ? "Contacto" : "Contact" },
+  ];
+
   return (
     <div
       className={`fixed inset-0 bg-black z-50 transform transition-transform duration-300 ${
-        open ? "translate-x-0" : "translate-x-full"
+        open ? "translate-x-0" : "translate-x-full hidden"
       }`}
     >
       {/* Header */}
@@ -24,57 +32,30 @@ const MobileNav: React.FC<MobileNavProps> = ({ lang, open, onClose }) => {
 
         {/* Close button */}
         <button
-          className="text-emerald-500"
+          className="text-emerald-500 cursor-pointer"
           onClick={onClose}
           aria-label="Close menu"
           type="button"
         >
-          <IoCloseSharp />
+          <IoCloseSharp size={24} />
         </button>
       </div>
 
       {/* Navigation */}
       <nav className="w-full flex justify-center items-center mt-10">
-        <ul className="flex flex-col gap-4  font-medium text-white">
-          <li className="group">
-            <Link
-              href={`/${lang}#skills`}
-              className="relative  text-gray-300 transition-colors duration-300 hover:text-emerald-500 "
-            >
-              Habilidades
-              <span className="absolute left-0 -bottom-1 h-0.5 w-0 bg-emerald-500 transition-all duration-300 group-hover:w-full"></span>
-            </Link>
-          </li>
-
-          <li className="group">
-            <Link
-              href="/"
-              className="relative  text-gray-300 transition-colors duration-300 hover:text-emerald-500"
-            >
-              Proyectos
-              <span className="absolute left-0 -bottom-1 h-0.5 w-0 bg-emerald-500 transition-all duration-300 group-hover:w-full"></span>
-            </Link>
-          </li>
-
-          <li className="group">
-            <Link
-              href="/"
-              className="relative  text-gray-300 transition-colors duration-300 hover:text-emerald-500"
-            >
-              Sobre mí
-              <span className="absolute left-0 -bottom-1 h-0.5 w-0 bg-emerald-500 transition-all duration-300 group-hover:w-full"></span>
-            </Link>
-          </li>
-
-          <li className="group">
-            <Link
-              href="/"
-              className="relative  text-gray-300 transition-colors duration-300 hover:text-emerald-500"
-            >
-              Contacto
-              <span className="absolute left-0 -bottom-1 h-0.5 w-0 bg-emerald-500 transition-all duration-300 group-hover:w-full"></span>
-            </Link>
-          </li>
+        <ul className="flex flex-col gap-6 font-medium text-white text-xl text-center">
+          {navLinks.map(({ id, label }) => (
+            <li key={id} className="group">
+              <Link
+                href={`/${lang}#${id}`}
+                onClick={onClose}
+                className="relative text-gray-300 transition-colors duration-300 hover:text-emerald-500"
+              >
+                {label}
+                <span className="absolute left-0 -bottom-1 h-0.5 w-0 bg-emerald-500 transition-all duration-300 group-hover:w-full"></span>
+              </Link>
+            </li>
+          ))}
         </ul>
       </nav>
     </div>
