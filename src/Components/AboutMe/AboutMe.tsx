@@ -10,8 +10,8 @@ type props = {
 
 const AboutMe = ({ dict }: props) => {
   return (
-    <section className="flex justify-center items-center w-full h-screen">
-      <div className="w-5/6 mx-auto flex flex-col items-center gap-y-5">
+    <section className="flex justify-center items-center w-full md:h-screen">
+      <div className="w-5/6 mx-auto flex flex-col items-center gap-y-5 mt-20 lg:mt-0">
         <Image
           src={UlisesAramis}
           priority
