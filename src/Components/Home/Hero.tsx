@@ -1,10 +1,10 @@
 import Image from "next/image";
-import Link from "next/link"; // Importamos Link para la navegación
+import Link from "next/link";
 import Ocelotl from "@/Images/OcelotlTwo.webp";
 
 type Props = {
   dict: any;
-  lang: "es" | "en"; // Añadimos lang para construir la ruta correcta
+  lang: "es" | "en";
 };
 
 const Hero = ({ dict, lang }: Props) => {
@@ -21,7 +21,6 @@ const Hero = ({ dict, lang }: Props) => {
           </p>
 
           <div className="mt-6 flex flex-wrap gap-4 justify-center lg:justify-start">
-            {/* Convertimos el botón en un Link funcional hacia proyectos */}
             <Link
               href={`/${lang}#projects`}
               className="px-6 py-2 bg-emerald-500 rounded-full font-medium hover:bg-emerald-600 transition-colors text-white"
@@ -29,13 +28,12 @@ const Hero = ({ dict, lang }: Props) => {
               {dict.hero.projects}
             </Link>
 
-            {/* Convertimos el botón en un Link funcional hacia contacto */}
-            {/* <Link
+            <Link
               href={`/${lang}#contact`}
               className="px-6 py-2 border border-emerald-500 rounded-full font-medium hover:bg-emerald-500/10 transition-colors text-white"
             >
               {dict.hero.contact}
-            </Link> */}
+            </Link>
           </div>
         </div>
 
