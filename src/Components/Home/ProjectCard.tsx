@@ -12,11 +12,14 @@ type Project = {
   isLottie?: boolean;
 };
 
+// 1. Añadimos 'dict' al tipo de las Props
 type Props = {
   project: Project;
+  dict: any;
 };
 
-const ProjectCard = ({ project }: Props) => {
+// 2. Desestructuramos 'dict' para poder usarlo en el componente
+const ProjectCard = ({ project, dict }: Props) => {
   return (
     <div className="rounded-xl overflow-hidden border-2 border-emerald-500/30 shadow-md hover:shadow-emerald-500/80 transition-all duration-300 w-72">
       <div className="relative w-full h-60 flex items-center justify-center">
@@ -29,7 +32,8 @@ const ProjectCard = ({ project }: Props) => {
             src={project.image}
             alt={project.title}
             fill
-            className="w-30 h-30"
+            sizes="288px"
+            className="object-contain"
           />
         ) : (
           <div className="text-gray-500 text-sm">Sin vista previa</div>
@@ -42,22 +46,24 @@ const ProjectCard = ({ project }: Props) => {
         <p className="text-gray-400 text-sm">{project.stack}</p>
 
         <div className="flex gap-2 mt-3">
+          {/* 3. Corregido: Ahora apunta al enlace correcto y usa el texto del JSON */}
           <a
             href={project.demo}
             target="_blank"
             rel="noopener noreferrer"
             className="px-3 py-1 bg-emerald-500 text-black rounded-md text-sm hover:bg-emerald-400 transition"
           >
-            Ver Demo
+            {dict.demo?.WatchDemo || "View Demo"}
           </a>
 
+          {/* 4. Corregido: Ahora el botón de código también es dinámico */}
           <a
             href={project.code}
             target="_blank"
             rel="noopener noreferrer"
             className="px-3 py-1 border border-gray-500 rounded-md text-sm hover:border-emerald-400 transition"
           >
-            Código
+            {dict.demo?.ViewCode || "View Code"}
           </a>
         </div>
       </div>
