@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import CreaitorLoading from "@/Components/Animation/CreaitorLoading";
+import LottieLoading from "@/Components/Animation/LottieLoading";
 
 type Project = {
   title: string;
@@ -23,7 +23,7 @@ const ProjectCard = ({ project, dict }: Props) => {
       <div className="relative w-full h-60 flex items-center justify-center">
         {project.isLottie ? (
           <div className="w-16 h-16 flex items-center justify-center">
-            <CreaitorLoading />
+            <LottieLoading />
           </div>
         ) : project.image && project.image !== "" ? (
           <Image
