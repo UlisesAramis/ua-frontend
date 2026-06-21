@@ -1,7 +1,7 @@
 "use client";
 
 import Lottie from "lottie-react";
-import animationData from "@/lottieFiles/Stain.json";
+import animationData from "@/lottiefiles/stain.json";
 
 export default function CreaitorLoading() {
   return (
