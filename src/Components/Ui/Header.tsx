@@ -50,12 +50,16 @@ const Header: React.FC<Props> = ({ dict, lang }) => {
               <span className="text-emerald-500">A</span>
             </h1>
 
-            <span className="text-gray-700">|</span>
+            <span className="hidden md:block text-gray-700">|</span>
 
             <p className="hidden text-sm font-medium text-gray-700 transition-colors duration-300 group-hover:text-black sm:block md:text-base">
               {dict.header.role}
             </p>
           </Link>
+
+          <div className="md:hidden">
+            <LanguageSwitcher lang={lang} />
+          </div>
 
           <nav className="hidden md:block">
             <ul className="flex items-center gap-8">
