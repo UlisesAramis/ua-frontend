@@ -21,12 +21,12 @@ const Hero = ({ dict, lang }: Props) => {
           </p>
 
           <div className="mt-6 flex flex-wrap gap-4 justify-center lg:justify-start">
-            <Link
+            <a
               href={`/${lang}#projects`}
               className="px-6 py-2 bg-emerald-500 rounded-full font-medium hover:bg-emerald-600 transition-colors text-white"
             >
               {dict.hero.projects}
-            </Link>
+            </a>
 
             {/* <Link
               href={`/${lang}#contact`}
