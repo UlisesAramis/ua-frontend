@@ -7,8 +7,8 @@ type props = {
 
 const AboutMe = ({ dict }: props) => {
   return (
-    <section className="flex justify-center items-center w-full md:h-screen">
-      <div className="w-5/6 mx-auto flex flex-col items-center gap-y-5 mt-20 lg:mt-0">
+    <section className="flex justify-center items-center w-full">
+      <div className="w-5/6 mx-auto flex flex-col items-center gap-y-5 mt-10">
         <Image
           src={UlisesAramis}
           priority
