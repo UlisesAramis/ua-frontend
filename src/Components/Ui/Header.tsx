@@ -44,7 +44,7 @@ const Header: React.FC<Props> = ({ dict, lang }) => {
     <>
       <header className="sticky top-0 z-50 border-b border-emerald-500/10 bg-white/80 backdrop-blur-xl">
         <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6">
-          <Link href={`/${lang}`} className="group flex items-center gap-2">
+          <a href={`/${lang}`} className="group flex items-center gap-2">
             <h1 className="text-2xl font-bold transition-transform duration-300 group-hover:scale-110">
               <span className="text-black">U</span>
               <span className="text-emerald-500">A</span>
@@ -55,7 +55,7 @@ const Header: React.FC<Props> = ({ dict, lang }) => {
             <p className="hidden text-sm font-medium text-gray-700 transition-colors duration-300 group-hover:text-black sm:block md:text-base">
               {dict.header.role}
             </p>
-          </Link>
+          </a>
 
           <div className="md:hidden">
             <LanguageSwitcher lang={lang} />
